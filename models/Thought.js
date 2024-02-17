@@ -28,13 +28,13 @@ const thoughtSchema = new Schema(
 )
 
 thoughtSchema
-  .virtual('reactionCount')
-  .get(function () {
-    return `${this.reactions.length}`;
-  })
-  .set(function () {
+    .virtual('reactionCount')
+    .get(function () {
+        return `${this.reactions.length}`;
+    })
+    .set(function () {
 
-  });
+    });
 
 const Thought = model('thought', thoughtSchema);
 
